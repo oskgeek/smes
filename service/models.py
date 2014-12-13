@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 
 class Staff(models.Model):
@@ -32,6 +34,10 @@ class PatientReport(models.Model):
     emergency_type = models.CharField(max_length=2, choices=EMERGENCY_TYPE_CHOICES)
     description = models.TextField(blank=True, null=True)
     picture = models.TextField(blank=True, null=True)
+    reporting_time = models.DateTimeField(verbose_name="Reported Time",
+                                        default=datetime.datetime.now()
+                                        blank=True, null=True,
+                                        editable=False)
 
         
     class Meta:
