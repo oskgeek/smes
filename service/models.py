@@ -35,7 +35,7 @@ class PatientReport(models.Model):
     description = models.TextField(blank=True, null=True)
     picture = models.TextField(blank=True, null=True)
     reporting_time = models.DateTimeField(verbose_name="Reported Time",
-                                        default=datetime.datetime.now()
+                                        default=datetime.datetime.now(),
                                         blank=True, null=True,
                                         editable=False)
 
