@@ -22,9 +22,9 @@ class Staff(models.Model):
             
 class PatientReport(models.Model):
     GENDER_CHOICES = (('M', 'Male'), ('F', 'Female'), ('O', 'Other'))
-    EMERGENCY_TYPE_CHOICES = (('ha', 'Heart Attack'), ('as', 'Asthma'), 
+    EMERGENCY_TYPE_CHOICES = (('he', 'Heart Attack'), ('as', 'Asthma'), 
         ('ac', 'Accident'), ('tr', 'Trauma'), ('po', 'Poisonous'),
-        ('bl', 'Bleeding'), ('ch', 'Choke'), ('bt', 'Bitten'))
+        ('bl', 'Bleeding'), ('ch', 'Choke'), ('bi', 'Bitten'))
     i_patient_report = models.AutoField(primary_key=True)
     reported_by = models.ForeignKey(Staff)
     patient_name = models.CharField(max_length=128, verbose_name='Username')
